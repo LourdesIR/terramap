@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./src/style.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <title>TerraMap</title>
+</head>
+<body>
+    <header class="mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand">TerraMap</a>
+        </nav>
+    </header>
+    <main class="mt-5">
+        <section class="row mx-auto">
+            <h1>Crea tu punto de Interes</h1>
+            <form method="POST" action="src/form.js" class="col-12 col-md-6 col-lg-5" id="form">
+                <div class="form-group">
+                  <label for="name">Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="AEROTERRA SA" value="" required>
+                </div>
+                <div class="form-group">
+                    <label for="dir">Dirección</label>
+                    <input type="text" class="form-control" name="dir" id="dir" placeholder="Av. Eduardo Madero 1020, CABA" value="" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="number" class="form-control" id="phone" placeholder="5491152720900" value="" required>
+                  </div>
+                <div class="form-group" >
+                  <label for="category">Categoria</label>
+                  <select class="form-control" name="category" id="category" >
+                    <option value="comercial">Comercial</option>
+                    <option value="Residencial">Residencial</option>
+                    <option value="mixta">Mixta</option>
+                  </select>
+                </div>
+                <label class="m-auto">Coordenadas:</label><br>
+                <div class="form-group row">
+                    <div class="col-6">
+                    <label for="lat">Latitud</label>
+                    <input type="text" class="form-control" name="lat" id="lat" placeholder="-34.921" value="" required>
+                    </div>
+                    <div class="col-6">
+                    <label for="long">Longitud</label>
+                    <input type="text" class="form-control" name="long" id="long" placeholder="-57.953" value="" required>
+                    </div>
+                </div>
+                <div class="divButton">
+                  <button type="button" class="btn btn-success" value="submit" id="submit">Crear</button>
+                </div>
+                </form>
+              <div class="col-12 col-md-6 col-lg-7">
+                <div id="mapid"></div>
+              </div>
+
+        </section>
+    </main>
+    <footer class="mx-auto">
+        <div>
+            <p> Realizado para AEROTERRA SA - Lourdes Reynaldo 2021 </p>
+        </div>
+       
+    </footer>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js" data-require="jquery@2.0.3 current" data-semver="2.0.3"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="./src/index.js"></script>
+    <script src="./src/form.js"></script>
+</body>
+</html>
