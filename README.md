@@ -51,8 +51,7 @@ Donde los valores son trabajados en index.js
                   <button type="button" class="btn btn-success" value="submit" id="submit">Crear</button>
                 </div>
                 </form>
-
-´´´
+```
 
 ### Inclusion del mapa en index.html
 
@@ -66,7 +65,7 @@ Donde los valores son trabajados en index.js
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-´´´
+```
 
 ### Trabajo sobre el mapa en Index.js
 
@@ -84,7 +83,7 @@ Creacion del mapa y punto focal, accessToken obtenida de mapbox
         accessToken: 'pk.eyJ1IjoibG91cmRlc2lyIiwiYSI6ImNrcGVwcHowdjAwMmMycG42bWQ4cncyMnQifQ.6jBpJ3R3vsAw-_T1zfeaIw'
     }).addTo(map);
 
-´´´
+```
 
 Variables del DOM
 
@@ -99,7 +98,7 @@ Variables del DOM
     let lat = document.getElementById('lat');
     let long = document.getElementById('long');
     let select = document.getElementById('category');
-´´´
+```
 
 Creacion de los puntos de interes al escuchar el click y acumulacion de puntos.
 **algunas validaciones antes de ingresar datos**
@@ -132,8 +131,7 @@ Creacion de los puntos de interes al escuchar el click y acumulacion de puntos.
         if(isValid){
              //Incluir nuevo punto en el array
         puntosDeInteres.unshift({namev,dirv,phonev,latv,longv,selectv})
-
-´´´
+```
 Acumulacion de nuevos puntos.
 
 ```
@@ -161,4 +159,4 @@ Acumulacion de nuevos puntos.
     }
 
 })
-´´´
+```
