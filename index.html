@@ -18,25 +18,28 @@
     </header>
     <main class="mt-5">
         <section class="row mx-auto">
-            <h1>Crea tu punto de Interes</h1>
+            <h1>Crea tu punto de Interes</h1> <br>
             <form method="POST" action="src/form.js" class="col-12 col-md-6 col-lg-5" id="form">
                 <div class="form-group">
                   <label for="name">Nombre</label>
-                  <input type="text" class="form-control" id="name" placeholder="AEROTERRA SA" value="" required>
+                  <input type="text" class="form-control" id="name"  placeholder="AEROTERRA SA" value="" maxlength="20" required>
+                  <p id="alertName"></p>
                 </div>
                 <div class="form-group">
                     <label for="dir">Dirección</label>
-                    <input type="text" class="form-control" name="dir" id="dir" placeholder="Av. Eduardo Madero 1020, CABA" value="" required>
+                    <input type="text" class="form-control" name="dir" id="dir" placeholder="Av. Eduardo Madero 1020, CABA" maxlength="40" value="" required>
+                    <p id="alertDir"></p>
                   </div>
                   <div class="form-group">
                     <label for="phone">Teléfono</label>
-                    <input type="number" class="form-control" id="phone" placeholder="5491152720900" value="" required>
+                    <input type="number" class="form-control" id="phone" minlength="10" maxlength="13" placeholder="541152720900" value="" >
                   </div>
+
                 <div class="form-group" >
                   <label for="category">Categoria</label>
                   <select class="form-control" name="category" id="category" >
                     <option value="comercial">Comercial</option>
-                    <option value="Residencial">Residencial</option>
+                    <option value="residencial">Residencial</option>
                     <option value="mixta">Mixta</option>
                   </select>
                 </div>
@@ -44,12 +47,14 @@
                 <div class="form-group row">
                     <div class="col-6">
                     <label for="lat">Latitud</label>
-                    <input type="text" class="form-control" name="lat" id="lat" placeholder="-34.921" value="" required>
-                    </div>
+                    <input type="number" class="form-control" name="lat" id="lat" placeholder="-34.921" value="" min="-180" max="180" required>
+                    <p id="alertLat"></p>  
+                  </div>
                     <div class="col-6">
                     <label for="long">Longitud</label>
-                    <input type="text" class="form-control" name="long" id="long" placeholder="-57.953" value="" required>
-                    </div>
+                    <input type="number" class="form-control" name="long" id="long" placeholder="-57.953" value="" min="-90" max="90" required>
+                    <p id="alertLong"></p> 
+                  </div>
                 </div>
                 <div class="divButton">
                   <button type="button" class="btn btn-success" value="submit" id="submit">Crear</button>
@@ -69,7 +74,7 @@
     </footer>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js" data-require="jquery@2.0.3 current" data-semver="2.0.3"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-    <script src="./src/index.js"></script>
-    <script src="./src/form.js"></script>
+  
+    <script src="./src/scripts/index.js"></script>
 </body>
 </html>

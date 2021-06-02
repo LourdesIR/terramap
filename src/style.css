@@ -43,6 +43,10 @@ h1 {
   justify-content: center;
 }
 
+form div p {
+  color: #e91e63;
+}
+
 #submit {
   width: 100px;
   font-weight: 700;
